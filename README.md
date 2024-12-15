@@ -9,5 +9,5 @@ def longest_substring(digits):
     if n(i)!=max(n):
       m+=n(i)
     else:
-      brake
-  return digits[m:1:m+max(n)]
+      break
+  return digits[m:m+max(n)]
