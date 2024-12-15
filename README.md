@@ -4,10 +4,17 @@ def longest_substring(digits):
   for i in range [0,len(digits)-1]:
     if digits(i)%2==digits(i+1)%2:
       n=[n,i]
-  m=0;
-  for i in range [0, len(n)]:
-    if n(i)!=max(n):
-      m+=n(i)
+  p=[]
+  for  i in range [0, len(n)]:
+      if i>0:
+        p=[p,n(i)-n(i-1)]
+      else:
+          p=[p,n(i)]
+  m=0
+  for i in range [0, len(p)]:
+    if n(i)!=max(p):
+      m+=p(i)
     else:
       break
+  return digits[m:m+max(p)]
   return digits[m:m+max(n)]
